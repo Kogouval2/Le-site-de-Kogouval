@@ -1,4 +1,4 @@
-/* Styles de base pour le corps du site */
+/* Mise en forme globale */
 * {
     margin: 0;
     padding: 0;
@@ -6,99 +6,143 @@
 }
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f4f4f9; /* Fond clair et agréable */
-    color: #333; /* Texte sombre pour le contraste */
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background-color: #f8f8f8; /* Fond très clair pour une sensation de légèreté */
+    color: #333; /* Couleur sombre pour un bon contraste */
     line-height: 1.6;
-    max-width: 1200px;
-    margin: 0 auto;
     padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh;
 }
 
-/* Style du header */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Header */
 header {
-    background-color: #007bff; /* Bleu clair et apaisant */
+    background-color: #2b2d42; /* Bleu sombre moderne */
     color: white;
+    padding: 60px 20px;
     text-align: center;
-    padding: 30px;
     border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
 header h1 {
     font-size: 2.5em;
-    font-weight: bold;
+    margin-bottom: 10px;
 }
 
 header p {
     font-size: 1.2em;
     margin-top: 10px;
+    color: #8d99ae; /* Gris clair pour un contraste doux */
 }
 
-/* Styles pour les sections */
+/* Sections */
 section {
-    margin-top: 40px;
-    padding: 20px;
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    margin-top: 60px;
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 
 section h2 {
-    font-size: 2em;
-    color: #007bff;
+    font-size: 2.2em;
     margin-bottom: 20px;
     text-align: center;
+    color: #2b2d42; /* Même bleu sombre que le header */
 }
 
 ul {
     list-style: none;
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
-    gap: 15px;
+    gap: 30px;
 }
 
 ul li {
-    font-size: 1.2em;
+    font-size: 1.1em;
 }
 
 ul li a {
-    color: #007bff;
+    color: #2b2d42;
     text-decoration: none;
-    padding: 8px 15px;
-    border: 2px solid #007bff;
-    border-radius: 20px;
-    transition: all 0.3s ease;
+    font-weight: bold;
+    position: relative;
+    padding: 5px 0;
+    transition: color 0.3s ease;
+}
+
+ul li a::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #2b2d42;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.3s ease-out;
 }
 
 ul li a:hover {
-    background-color: #007bff;
-    color: white;
-    transform: scale(1.1);
+    color: #ff6f61; /* Couleur d'accentuation au survol */
 }
 
-/* Style pour les projets */
+ul li a:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+/* Projet (image et description) */
 .project {
     display: flex;
-    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    margin-top: 20px;
     text-align: center;
+    flex-direction: column;
 }
 
 .project img {
+    width: 80%;
+    max-width: 500px;
+    height: auto;
     border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.project p {
+    font-size: 1.2em;
+    color: #333;
+}
+
+.project a {
+    color: #ff6f61;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.project a:hover {
+    color: #2b2d42;
 }
 
 /* Footer */
 footer {
-    margin-top: 50px;
     text-align: center;
     padding: 20px;
-    background-color: #007bff;
+    background-color: #2b2d42;
     color: white;
+    font-size: 1em;
+    margin-top: 50px;
     border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
