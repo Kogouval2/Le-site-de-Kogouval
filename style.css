@@ -1,4 +1,4 @@
-/* Mise en forme globale */
+/* Global Styles */
 * {
     margin: 0;
     padding: 0;
@@ -6,143 +6,105 @@
 }
 
 body {
-    font-family: 'Helvetica Neue', Arial, sans-serif;
-    background-color: #f8f8f8; /* Fond très clair pour une sensation de légèreté */
-    color: #333; /* Couleur sombre pour un bon contraste */
+    background-color: #f9f9f9; /* Fond clair pour une meilleure lisibilité */
+    color: #333; /* Texte sombre */
+    font-family: 'Arial', sans-serif; /* Police moderne et lisible */
     line-height: 1.6;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    min-height: 100vh;
-}
-
-.container {
-    width: 100%;
-    max-width: 1200px;
+    max-width: 900px;
     margin: 0 auto;
+    padding: 20px;
 }
 
 /* Header */
 header {
-    background-color: #2b2d42; /* Bleu sombre moderne */
-    color: white;
-    padding: 60px 20px;
     text-align: center;
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    background-color: #0056b3; /* Bleu foncé élégant */
+    color: white;
+    border-radius: 8px;
+    margin-bottom: 30px;
 }
 
-header h1 {
+h1 {
     font-size: 2.5em;
     margin-bottom: 10px;
 }
 
-header p {
+p {
     font-size: 1.2em;
-    margin-top: 10px;
-    color: #8d99ae; /* Gris clair pour un contraste doux */
 }
 
-/* Sections */
+/* Section */
 section {
-    margin-top: 60px;
-    background-color: #ffffff;
-    padding: 40px;
-    border-radius: 8px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    margin-bottom: 40px;
 }
 
-section h2 {
-    font-size: 2.2em;
-    margin-bottom: 20px;
+h2 {
+    font-size: 1.8em;
+    margin-bottom: 15px;
+    color: #0056b3;
     text-align: center;
-    color: #2b2d42; /* Même bleu sombre que le header */
 }
 
-ul {
+/* Links */
+.link-list {
     list-style: none;
+    padding: 0;
     display: flex;
     justify-content: center;
-    gap: 30px;
+    gap: 15px;
 }
 
-ul li {
+.link-list li a {
+    color: #0056b3;
+    text-decoration: none;
     font-size: 1.1em;
-}
-
-ul li a {
-    color: #2b2d42;
-    text-decoration: none;
     font-weight: bold;
-    position: relative;
-    padding: 5px 0;
-    transition: color 0.3s ease;
+    border-bottom: 2px solid transparent;
+    transition: color 0.3s ease, border-color 0.3s ease;
 }
 
-ul li a::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 2px;
-    background-color: #2b2d42;
-    transform: scaleX(0);
-    transform-origin: bottom right;
-    transition: transform 0.3s ease-out;
+.link-list li a:hover {
+    color: #003d80;
+    border-color: #003d80;
 }
 
-ul li a:hover {
-    color: #ff6f61; /* Couleur d'accentuation au survol */
-}
-
-ul li a:hover::after {
-    transform: scaleX(1);
-    transform-origin: bottom left;
-}
-
-/* Projet (image et description) */
-.project {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+/* Project Section */
+.project-image {
     text-align: center;
-    flex-direction: column;
+    margin-top: 20px;
 }
 
-.project img {
-    width: 80%;
-    max-width: 500px;
-    height: auto;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px;
+.project-image img {
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.project p {
-    font-size: 1.2em;
-    color: #333;
-}
-
-.project a {
-    color: #ff6f61;
-    font-weight: bold;
+/* Button */
+.button {
+    display: inline-block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #0056b3;
+    color: white;
     text-decoration: none;
-    transition: color 0.3s ease;
+    font-size: 1.1em;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-.project a:hover {
-    color: #2b2d42;
+.button:hover {
+    background-color: #003d80;
+    transform: scale(1.05);
 }
 
 /* Footer */
 footer {
     text-align: center;
-    padding: 20px;
-    background-color: #2b2d42;
+    padding: 10px;
+    background-color: #0056b3;
     color: white;
-    font-size: 1em;
-    margin-top: 50px;
-    border-radius: 10px;
+    border-radius: 8px;
+    font-size: 0.9em;
+    margin-top: 30px;
 }
